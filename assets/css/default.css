@@ -1,0 +1,493 @@
+/*------------------------------------------------------------------
+Last change:    24/04/21 [fixed Float bug, vf]
+
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+  01. Theme Default Css
+
+
+  -------------------------------------------------------------------*/
+
+
+/*
+/* Font Face */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/*
+==========================================
+   01. Theme Default CSS
+==========================================
+*/
+
+
+.logo-navs img {
+  height: 35px;
+  cursor: pointer;
+}
+
+.logo-navs {
+  padding: 10px 0px 10px 5px;
+  background: #FFFFFF;
+  border: 1px solid #1C82A6;
+  margin-left: -25px;
+  width: 280px;
+}
+
+
+
+i.far.fa-bell,
+i.far.fa-comment-alt {
+  color: #FFFFFF;
+  font-size: 20px;
+  position: relative;
+}
+
+.user-img img {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+}
+
+div#navbarSupportedContent {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.user-name a {
+  color: #FFFFFF !important;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+i.fas.fa-bars {
+  color: #00264D;
+  margin-left: 67px;
+  cursor: pointer;
+}
+
+.sup-num {
+  background-color: #F0142F;
+  padding: 8px;
+  color: white;
+  font-size: 12px;
+  border-radius: 15px;
+  position: absolute;
+  top: -9px;
+  left: 6px;
+}
+
+/* ########### sidebar nav start ##########*/
+.sidebar {
+  height: 100%;
+  width: 65px;
+  background-color: #00264D;
+  z-index: 1;
+
+  transition: all 0.5s ease;
+  position: fixed;
+  margin-top: 60px;
+  overflow-y: auto;
+}
+
+.sidebar-inner{
+  background-color: #00264D;
+}
+
+.sidebar.open {
+  width: 280px;
+}
+
+.logo-details {
+  position: relative;
+  top: -22px;
+}
+
+.logo-details .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.logo-details #btn {
+  position: absolute;
+  top: -36%;
+  right: -25%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  font-size: 23px;
+  color: #00264D;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar.open .logo-details #btn {
+  text-align: right;
+}
+
+.sidebar i {
+  color: #fff;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 47px;
+}
+
+.sidebar .nav-list {
+  margin-top: 30px;
+  height: 100%;
+}
+
+.sidebar .canvas-list {
+  position: relative;
+  margin: 8px 0;
+  left: -40px;
+  width: 280px;
+  list-style: none;
+}
+
+.heading-txt {
+  padding-left: 34px;
+
+}
+
+#content .top-logo-navs{
+  background-color: #1E87AC;
+  height: 70px;
+}
+
+.sidebar li a {
+  display: flex;
+
+  line-height: 40px;
+
+  align-items: center;
+  text-decoration: none;
+
+  background-color: #00264D;
+  position: relative;
+}
+
+.nav-list-width {
+  width: 170px;
+}
+
+.sidebar li a:hover {
+  background-color: #0EA1D1;
+}
+
+.sidebar li a .links_name {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.sub-menu span {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sub-menu li a {
+
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  font-size: 14px;
+
+}
+
+.sidebar.open li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+  transition: all 0.5s ease;
+  color: #FFFFFF;
+}
+
+.sidebar .canvas-list i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+.drop-down {
+  margin-left: -38px;
+  background-color: #001933;
+}
+
+.dropdown-txt {
+  padding-left: 34px;
+}
+/* ########################sidebar end ########################### */
+
+
+/*############################## wrapper page start ###############*/
+.all_content{
+  padding-left:67px;
+  padding-top:80px;
+  transition: padding-left .5s;
+}
+
+/* ##########Four cards###### */
+
+.dollar {
+  padding: 10px;
+}
+
+.dollar h3 {
+  font-size: 39px;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  font-style: bold;
+}
+
+.dollar span {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  font-style: bold;
+}
+
+.card-one {
+  background: linear-gradient(90deg, hsla(248, 38%, 59%, 1) 0%, hsla(250, 14%, 61%, 1) 100%);
+}
+
+.card-two {
+  background: linear-gradient(90deg, hsla(185, 64%, 51%, 1) 0%, hsla(250, 14%, 61%, 1) 100%);
+}
+
+.card-three {
+  background: linear-gradient(90deg, hsla(210, 92%, 32%, 1) 0%, hsla(250, 14%, 61%, 1) 100%);
+}
+
+.card-four {
+  background: linear-gradient(180deg, hsla(193, 70%, 66%, 1) 0%, hsla(250, 14%, 61%, 1) 100%);}
+
+
+/* .card-one,
+.card-two,
+.card-three,
+.card-four {
+
+  margin-top: 20px;
+  border: 1px solid #707070;
+} */
+
+/* ####### four cards end ####### */
+
+/* ########  chart design start  ########## */
+
+.atm-status .status-text{
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  color: #000021;
+}
+.atm-status .dollar-text{
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  color: #9A9A9A;
+  font-weight: bold;
+}
+.atm-status .sml-txt{
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #0D0D0D;
+}
+.atm-status{
+margin-top: 20px;
+
+}
+
+/* ######## chart design End ########## */
+
+
+
+/* ########### tables Start ########## */
+.table {
+  border: 1px solid #D5D5D5;
+}
+
+.tahle-heading {
+  background-color: #1A96B6;
+}
+
+.tahle-heading tr th {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.table-row:hover {
+  background-color: #ececec;
+}
+
+.table-row.active {
+  background-color: #67C3E1;
+}
+
+.previous-btn {
+  float: right;
+}
+
+.pagination li a {
+  font-size: 16px;
+  color: #707070;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pagination li a:hover {
+  background-color: #0EA1D1;
+  color: #FFFFFF;
+}
+
+a.page-link.active {
+  background-color: #0EA1D1;
+  color: #FFFFFF;
+}
+.table-cells-left{
+  border-left:none !important;
+}
+.table-cells-right{
+  border-right:none !important;
+}
+/* ########### tables End ########## */
+
+
+
+/* ############################# wrapper page end #########################*/
+
+/* ############################# Footer page Start #########################*/
+.cp-text {
+  color: #000021;
+  font: 14px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+padding-left: 14px;
+
+}
+
+.copyrights {
+  border: 1px solid #717171;
+  height: 100%;
+}
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Index_second csss
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* ######################### CRUD operation ################### */
+
+.crud-icons {
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+}
+
+.crud-icons i {
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 25%;
+}
+
+.fa-folder-plus {
+  background-color: #15F37D;
+  color: white;
+}
+
+.fa-pencil-alt {
+  background-color: #33C6D0;
+  color: white;
+}
+
+.fa-trash-alt {
+  background-color: #CB0000;
+  color: white;
+}
+
+.comapny-txt span {
+  float: left;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.add-btn button {
+  float: right;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: #FF6200;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+
+.add-category {
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 80px;
+  border-radius: 6px;
+}
+
+.search-icon span{
+padding: 10px;
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+font-weight: bold;
+}
+.search-icon i{
+  cursor: pointer;
+}
+.sub-menu.show {
+  transition: all 1s ease;
+ 
+}
+
+/* #####################################  Vechile 1 css property ################################### */
+
+.forms-space{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.btn-grps button{
+  width: 120px;
+}
+.fa-calendar-alt{
+  cursor: pointer;
+}
+.input-label{
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.submit-btn{
+  background-color: #0EA1D1;
+}
+
+.col-gap{
+  gap: 20px;
+}
